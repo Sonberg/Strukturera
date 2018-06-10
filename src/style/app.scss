@@ -1,0 +1,114 @@
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Rubik');
+
+// Set your brand colors
+$yellow: #ffdd57;
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+//$family-sans-serif: "Rubik", "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $yellow;
+$link: $pink;
+
+// Update some of Bulma's component variables
+$control-border-width: 0px;
+$input-background-color: $beige-lighter;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import the rest of Bulma
+@import "bulma";
+$navbar-height: 0rem;
+
+body {
+    background: #f6f7fb;
+    color: black;
+}
+
+.is-top-menu {
+    padding: 1.6rem 4em;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+
+    h1 {
+        margin: 0px;
+    }
+    li {
+        a {
+            color: $grey-dark;
+            &.router-link-active {
+                background: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+}
+
+    .is-fullheight {
+        min-height: calc(100vh);
+        max-height: calc(100vh);
+        height: calc(100vh);
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        .column {
+            overflow-y: auto;
+        }
+
+        &.columns:not(:last-child) {
+            margin: 0px;
+        }
+    }
+
+    
+@import url('./spacing.scss');
+@import "editor";
+@import "flex";
+
+
+.has-radius {
+    border-radius: 0.1em;
+}
+
+.dropdown-content {
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+    border: 1px solid #dbdbdb3d;
+}
+
+h1 {
+    @extend .title;
+    @extend .is-1;
+}
+
+h2 {
+    @extend .title;
+    @extend .is-2;
+}
+
+h3 {
+    @extend .title;
+    @extend .is-3;
+}
+
+h4 {
+    @extend .title;
+    @extend .is-4;
+}
+
+h5 {
+    @extend .title;
+    @extend .is-5;
+}
+
+h6 {
+    @extend .title;
+    @extend .is-6;
+}

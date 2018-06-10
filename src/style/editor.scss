@@ -1,0 +1,92 @@
+
+.project {
+    flex: 1;
+    overflow-x: scroll;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    & > div {
+        padding: 4em;
+        height: 100%;
+        flex: 0 0 auto;
+    }
+}
+
+.steps > div, .steps > input, .step {
+    width: 300px !important;
+    max-width: 300px !important;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+    background: white;
+    margin-right: 3em;
+
+    ul {
+        flex: 1;
+        min-height: 28px;
+        max-height: 60vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-bottom: 0px;
+
+        li {
+            padding: 1em 1.5em;
+            color: black;
+            transition: all 0.3s;
+            border-bottom: 1px solid #e6e6e6;
+
+            .tag:not(:last-child) {
+                margin-right: 0.5em;
+            }
+
+            &.sortable-ghost {
+                background: #e4e4e5;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+
+    input {
+        background: #6f717300;;
+        color: black;
+    }
+
+    .step-footer {
+        margin-top: auto;
+    }
+
+    .step-header {
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em 1.5em 1em;
+        display: flex;
+        border-bottom: 1px solid #e6e6e6;
+
+        svg {
+            width: 16px;
+        }
+    }
+
+    .step-footer {
+        padding: 1em;
+        input {
+            padding: 1em;
+        }
+    }
+
+    &.sortable-ghost {
+        border-color: #b3b3b3 !important;
+
+        .step-header {
+           
+        }
+
+
+    }
+}
